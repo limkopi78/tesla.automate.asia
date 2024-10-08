@@ -69,7 +69,7 @@ function renderChargerStatus(chargers) {
 
         // Add ETC and Comments fields
         const etcInput = document.createElement('input');
-        etcInput.type = 'time';
+        etcInput.type = 'text';  // Changed type from 'time' to 'text' for Flatpickr
         etcInput.classList.add('etc-input');
         etcInput.value = charger.etc || '';
 
@@ -93,6 +93,14 @@ function renderChargerStatus(chargers) {
         chargerWrapper.appendChild(commentsInput);
 
         locationElement.appendChild(chargerWrapper);
+
+        // Initialize Flatpickr for the ETC field
+        flatpickr(etcInput, {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true
+        });
     });
 }
 
