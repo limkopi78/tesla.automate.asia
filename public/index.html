@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singapore Destination Chargers Crowd Source Status</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Singapore Destination Chargers Crowd Source Status</h1>
+
+    <!-- Information Block -->
+    <div id="info-block">
+        <p><small><strong>Development Information:</strong> This page was entirely created using ChatGPT. Although I have a background in development, I did not write a single line of code for this project. Over the course of three nights, I built this simple web app by providing requirements to ChatGPT, which handled all the coding. This web app is hosted on Amazon AWS, all hosting configurations are also made with assistance from ChatGPT.</small></p>
+        <p><small><strong>General Information:</strong> This simple web app is designed for crowdsourcing the status of Tesla Destination Chargers in Singapore. It is intended for use specifically within Tesla browsers and may only be viewable there.</small></p>
+        <p><small><strong>Disclaimer:</strong> Since the information is crowdsourced, we cannot guarantee the accuracy of the status of the destination chargers. Additionally, as this app uses an in-memory database, any server or app restart may cause the page to display all chargers as 'available' by default. This app is not a means to contact the maintenance team for the destination chargers.</small></p>
+        <p><small><strong>Other Information:</strong> Please respect others' privacy and practice good EV charger usage and etiquette. This app was created for the benefit of Tesla drivers in Singapore, and we aspire to foster the best EV community in the country!</small></p>
+        <p><small><strong>How to Use:</strong> Simply update the status of the chargers at each location to reflect their current state. Picture yourself standing in front of the chargers and update them from left to right. If you are using a specific charger, feel free to indicate your estimated time of completion. The comments section allows drivers to share any additional information about a particular charger that may be helpful to others.</small></p>
+    </div>
+
+    <div id="user-view">
+        <h2>Location List</h2>
+        <button id="find-location-btn" class="tesla-button">Find Closest Location</button>
+
+        <!-- Dynamic content for locations and chargers will be added here -->
+        <div id="locations"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

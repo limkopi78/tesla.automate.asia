@@ -1,0 +1,183 @@
+/* General styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0 50px 0 50px; /* Set padding to not more than 50px */
+    color: #333;
+    text-align: left; /* Align body content to the left */
+}
+
+h1, h2 {
+    color: #333;
+    font-family: 'Gotham', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#user-view {
+    padding: 20px 0;
+    text-align: left; /* Align all the content inside #user-view to the left */
+}
+
+/* Style for Tesla-like black rectangular button */
+.tesla-button {
+    display: inline-block;
+    padding: 12px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.tesla-button:hover {
+    background-color: #333;
+}
+
+/* Style for the location info with fixed width */
+.location-info {
+    width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.location-labels {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Style for the charger wrapper */
+.charger-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align chargers to the left */
+    margin: 10px;
+}
+
+.charger-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.charger-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the pop-up */
+.status-popup {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Style for status options in the pop-up */
+.status-option-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+    transition: background-color 0.2s ease;
+    border-radius: 4px;
+}
+
+.status-option-wrapper:hover {
+    background-color: #f1f1f1;
+}
+
+.status-option {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.status-text {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+/* Style for ETC and comments input fields */
+.etc-input, .comments-input {
+    margin-top: 10px;
+    width: 100px;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    transition: border-color 0.2s ease;
+}
+
+.etc-input:focus, .comments-input:focus {
+    border-color: #e82127;
+    outline: none;
+}
+
+.etc-input[disabled], .comments-input[disabled] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* Charger container styles */
+#chargers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align the chargers content to the left */
+    margin-top: 20px;
+}
+
+/* Responsive layout for chargers */
+.row {
+    display: flex;
+    justify-content: flex-start; /* Align chargers to the left */
+    margin-bottom: 20px;
+}
+
+/* Ensure chargers are displayed in rows without stacking */
+.location-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .charger-wrapper {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .charger-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .status-option {
+        width: 30px;
+        height: 30px;
+    }
+
+    .etc-input, .comments-input {
+        width: 80px;
+    }
+}
